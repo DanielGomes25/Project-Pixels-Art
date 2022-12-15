@@ -26,6 +26,7 @@ const generatDiv = () => {
 
 generatDiv();
 
+
 //GERAR CORES
 
 const generatColors = () => {
@@ -61,7 +62,14 @@ const paintPalet = () => {
 paintPalet();
 
 
+//AJUSTAR BOTÃO
+const getBtn = document.getElementById('button-random-color')
+
+getBtn.addEventListener('click', paintPalet)
+
 }
+
+
 
 
 
