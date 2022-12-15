@@ -46,7 +46,11 @@ const paintPalet = () => {
 
     for (let index = 0; index < getColor.length; index += 1) {
 
+        if (getColor[index] === getColor[0]) {
+        getColor[index].style.backgroundColor = 'black';
+    } else {
         getColor[index].style.backgroundColor = generatColors();
+    }
 
     }
 
