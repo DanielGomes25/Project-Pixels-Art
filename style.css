@@ -10,17 +10,14 @@ body {
     color: aliceblue;
 }
 
-#color-palette {
-
-}
-
-.color {
-   
-    
-}
-
 #button-random-color {
 font-size: 20px;
+border-radius: 2%;
 
-
+}
+.blocos {
+    background-color: black;
+    width: 50%;
+    margin: 0 auto;
+    
 }

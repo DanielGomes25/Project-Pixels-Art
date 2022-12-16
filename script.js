@@ -1,5 +1,3 @@
-window.onload = () => {
-
 //GERAR DIVS
 
 const generatDiv = () => {
@@ -18,14 +16,11 @@ const generatDiv = () => {
         creatDiv.style.border = '1px solid black';
         creatDiv.style.padding = '50px';
         creatDiv.style.width = '40px';
+        creatDiv.style.borderRadius = '2%';
        
         
     };
-
 };
-
-generatDiv();
-
 
 //GERAR CORES
 
@@ -38,7 +33,18 @@ const generatColors = () => {
 
 };
 
-generatColors();
+//SALVAR CORES NO LOCALSTORAGE
+
+const saveColors = () => {
+    
+    const getColor = document.getElementsByClassName('color');
+    const arrayColors = [];
+    for (let index = 0; index < getColor.length; index += 1) {
+       arrayColors.push(getColor[index].style.backgroundColor);
+        }
+        localStorage.setItem('colorPalette', JSON.stringify(arrayColors))
+}    
+
 
 //PINTAR AS PALETAS
 const paintPalet = () => {
@@ -49,26 +55,45 @@ const paintPalet = () => {
 
         if (getColor[index] === getColor[0]) {
         getColor[index].style.backgroundColor = 'black';
-    } else {
+        
+        } else {
         getColor[index].style.backgroundColor = generatColors();
-    }
+       
+         }
+         saveColors();
+        }
+}
+//PEGAR AS CORES DO LOCALSTORAGE 
 
-    }
-
-
+const getColorL = () => {
+const getColor = document.getElementsByClassName('color')
+const getLocal = JSON.parse(localStorage.getItem('colorPalette'))
+for (let index = 0; index < getColor.length; index += 1) {
+    getColor[index].style.backgroundColor = getLocal[index];
+}
 
 }
 
-paintPalet();
-
-
 //AJUSTAR BOTÃO
-const getBtn = document.getElementById('button-random-color')
 
+
+const clickG = () => {
+    const getBtn = document.getElementById('button-random-color')
 getBtn.addEventListener('click', paintPalet)
 
 }
 
+window.onload = () => {
+    generatDiv();
+    generatColors();
+    if (localStorage.getItem('colorPalette') === null) {
+    paintPalet(); 
+    } else {
+    } getColorL();
+    clickG();
+   
+}
+    
 
 
 
