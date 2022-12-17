@@ -83,6 +83,29 @@ getBtn.addEventListener('click', paintPalet)
 
 }
 
+//CRIAR MATRIZ
+
+const generateCells = () => {
+const getBoard = document.getElementById('pixel-board');
+    for (let index = 0; index < 5; index += 1) {
+        const creatLine = document.createElement('div')
+        creatLine.id = 'line';
+        getBoard.appendChild(creatLine);
+
+        for (let index2 = 0; index2 < 5; index2 += 1) {
+            const pixel = document.createElement('div')
+            pixel.className = 'pixel'
+            creatLine.appendChild(pixel);
+        }
+    
+    }
+}
+
+
+
+
+
+
 window.onload = () => {
     generatDiv();
     generatColors();
@@ -91,7 +114,8 @@ window.onload = () => {
     } else {
     } getColorL();
     clickG();
-   
+   generateCells();
+
 }
     
 

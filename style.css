@@ -1,7 +1,3 @@
-body {
-    background-color: rgb(202, 253, 253);
-
-}
 #title {
     text-align: center;
     font-size: 50px;
@@ -13,11 +9,32 @@ body {
 #button-random-color {
 font-size: 20px;
 border-radius: 2%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+display: flex;
 
 }
-.blocos {
-    background-color: black;
-    width: 50%;
-    margin: 0 auto;
+
+#pixel-board {
+background-color: white;
+height: 550px;
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+display: flex;
+border: solid 3px black;
+}
     
+body {
+    background-color: rgb(202, 253, 253);
+}
+#line {
+background-color: white;
+    
+}
+
+.pixel {
+    background-color: white;
 }
