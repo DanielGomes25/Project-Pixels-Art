@@ -123,7 +123,17 @@ const selecionados = () => {
     })
 
     }
-}
+};
+
+const getBtnClear = document.getElementById('clear-board')
+
+getBtnClear.addEventListener('click', () => {
+    const getPixel = document.querySelectorAll('.pixel')
+    for (let index = 0; index < getPixel.length; index += 1) {
+        getPixel[index].style.backgroundColor = 'white';
+    }
+})
+
 
 window.onload = () => {
     generatDiv();
@@ -135,8 +145,6 @@ window.onload = () => {
     clickG();
    generateCells();
    selecionados();
-   
-
 }
     
 
