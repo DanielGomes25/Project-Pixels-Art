@@ -101,10 +101,23 @@ const getBoard = document.getElementById('pixel-board');
     }
 }
 
+const selecionados = () => {
+    const getColor = document.querySelectorAll('.color')
+    for (let index = 0; index < getColor.length; index += 1) {
+        getColor[0].classList.add('selected')
+        getColor[index].addEventListener('click', (event) => {
+            const selected = document.querySelector('.selected')
+            if (selected){
+                selected.classList.remove('selected');
+                }
+            event.target.classList.add('selected');
+        })
 
-
-
-
+    }
+        
+}
+    
+    
 
 window.onload = () => {
     generatDiv();
@@ -115,6 +128,7 @@ window.onload = () => {
     } getColorL();
     clickG();
    generateCells();
+   selecionados();
 
 }
     
