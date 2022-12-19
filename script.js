@@ -112,12 +112,18 @@ const selecionados = () => {
                 }
             event.target.classList.add('selected');
         })
+    const getPixel = document.querySelectorAll('.pixel')
+    for (let index = 0; index < getPixel.length; index += 1)
+    getPixel[index].addEventListener('click', (event) => {
+        const selected = document.querySelector('.selected');
+        const colorSelected = selected.style.backgroundColor;
+        if (selected) {
+            event.target.style.backgroundColor = colorSelected;
+        }
+    })
 
     }
-        
 }
-    
-    
 
 window.onload = () => {
     generatDiv();
@@ -129,6 +135,7 @@ window.onload = () => {
     clickG();
    generateCells();
    selecionados();
+   
 
 }
     

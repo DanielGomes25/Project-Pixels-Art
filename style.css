@@ -44,6 +44,7 @@ display: flex;
     height: 40px;
     border: solid black 1px;
     display: inline-block;
-
-   
+}
+.selected {
+ border: 8px outset red;
 }
