@@ -101,6 +101,24 @@ const getBoard = document.getElementById('pixel-board');
     }
 }
 
+const savePixel = () => {
+    const getPixel = document.querySelectorAll('.pixel')
+    const arrayPixel = [];
+    for (let index = 0; index < getPixel.length; index += 1) {
+        arrayPixel.push(getPixel[index].style.backgroundColor);
+        localStorage.setItem('pixelBoard', JSON.stringify(arrayPixel));
+    }
+};
+
+const getPixelL = () => {
+    const getPixel = document.querySelectorAll('.pixel')
+    const getPixelLocal = JSON.parse(localStorage.getItem('pixelBoard'))
+    for (let index = 0; index < getPixel.length; index += 1) {
+        getPixel[index].style.backgroundColor = getPixelLocal[index];
+    }
+   
+};
+
 const selecionados = () => {
     const getColor = document.querySelectorAll('.color')
     for (let index = 0; index < getColor.length; index += 1) {
@@ -119,7 +137,9 @@ const selecionados = () => {
         const colorSelected = selected.style.backgroundColor;
         if (selected) {
             event.target.style.backgroundColor = colorSelected;
+           savePixel();
         }
+        
     })
 
     }
@@ -131,8 +151,9 @@ getBtnClear.addEventListener('click', () => {
     const getPixel = document.querySelectorAll('.pixel')
     for (let index = 0; index < getPixel.length; index += 1) {
         getPixel[index].style.backgroundColor = 'white';
+        savePixel();
     }
-})
+});
 
 
 window.onload = () => {
@@ -141,14 +162,18 @@ window.onload = () => {
     if (localStorage.getItem('colorPalette') === null) {
     paintPalet(); 
     } else {
-    } getColorL();
+    getColorL();
+    } 
     clickG();
    generateCells();
-   selecionados();
+  selecionados()
+   if (localStorage.getItem('pixelBoard') === null) {
+    selecionados();
+} else {
+getPixelL();
 }
     
-
-
+};
 
 
 
