@@ -1,10 +1,19 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Project Pixels Art <h1>
+
+<img src='Paleta-de-cores.gif'><img>
+
+### Um dos projetos mais desafiadores que desenvolvi na trybe, a aplicação simula um quadro onde você pode selecionar entre quatro cores e pintar o quadro, você támbem pode limpar o quadro e pintar com novas cores.
+
+
+
+## Ferramentas utilizadas no desenvolvimento ⚒️:
++ HTML
++ CSS 
++ JAVASCRIPT
+
+## Arquivos que eu desenvolvi:
++ index.html
++ style.css
++ script.js
+
+## Os outros arquivos foram desenvolvidos pela Trybe.
