@@ -17,3 +17,22 @@
 + script.js
 
 ## Os outros arquivos foram desenvolvidos pela Trybe.
+
+<br>
+<br<>
+
+### One of the most challenging projects I've developed at trybe, the application simulates a board where you can select between four colors and paint the board, you can also clean the board and paint with new colors.
+
+
+
+## Tools used in development ⚒️:
++ HTML
++ css
++ JAVASCRIPT
+
+## Files I developed:
++ index.html
++ style.css
++ script.js
+
+## The other files were developed by Trybe.
